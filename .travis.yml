@@ -13,5 +13,14 @@ cache:
 
 script: 
     - npm run build
-    - aws s3 sync build/ s3://react-notes-app-client
-    - aws cloudfront create-invalidation --distribution-id EX72Z0FEP8XSI --paths '/*' && aws cloudfront create-invalidation --distribution-id EX72Z0FEP8XSI --paths '/*'
+    
+deploy:
+  provider: s3
+  access_key_id: $AWS_ACCESS_KEY_ID
+  secret_access_key: $AWS_SECRET_ACCESS_KEY
+  bucket: react-notes-app-client
+  #acl: ''
+  on:
+    repo: cbroberg/notes-app-client
+  skip_cleanup: true
+  local_dir: build
