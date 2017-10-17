@@ -12,5 +12,6 @@ cache:
     - node_modules
 
 script: 
-    - brew install awscli
-    - yarn deploy
+    - npm run build
+    - aws s3 sync build/ s3://react-notes-app-client
+    - aws cloudfront create-invalidation --distribution-id EX72Z0FEP8XSI --paths '/*' && aws cloudfront create-invalidation --distribution-id EX72Z0FEP8XSI --paths '/*'

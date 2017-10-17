@@ -18,7 +18,7 @@
 		"start": "react-scripts start",
 		"build": "react-scripts build",
 		"test": "react-scripts test --env=jsdom",
-		"predeploy": "sudo npm run build",
+		"predeploy": "npm run build",
 		"deploy": "aws s3 sync build/ s3://react-notes-app-client",
 		"postdeploy": "aws cloudfront create-invalidation --distribution-id EX72Z0FEP8XSI --paths '/*' && aws cloudfront create-invalidation --distribution-id EX72Z0FEP8XSI --paths '/*'",
 		"eject": "react-scripts eject"
