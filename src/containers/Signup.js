@@ -30,6 +30,7 @@ export default class Signup extends Component {
 		}
 	}
 
+	// TODO: Validate if mail is valid - https://github.com/chriso/validator.js
 	validateForm() {
 		return (
 			this.state.email.length > 0 &&
