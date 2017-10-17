@@ -1,4 +1,5 @@
 import React, { Component } from "react"
+import isEmail from 'validator/lib/isEmail'
 
 import {
 	HelpBlock,
@@ -30,10 +31,11 @@ export default class Signup extends Component {
 		}
 	}
 
-	// TODO: Validate if mail is valid - https://github.com/chriso/validator.js
+	// TODO: Validate if mail is valid - https://github.com/chriso/validator.js isEmail('foo@bar.com'); //=> true
 	validateForm() {
-		return (
+		return (			
 			this.state.email.length > 0 &&
+			isEmail(this.state.email) &&
 			this.state.password.length > 0 &&
 			this.state.password === this.state.confirmPassword
 		)

@@ -65,8 +65,8 @@ export default class Home extends Component {
 	renderLander() {
 		return (
 			<div className="lander">
-				<h1>ODEUM Notes (v. 0.1.0.)</h1>
-				<p>A simple note taking app using Serverless with NodeJS and React.</p>
+				<h1>ODEUM Notes</h1>
+				<p>A simple note taking app using Serverless with NodeJS and React. (v. 0.1.0.)</p>
 				<div>
 					<Link to="/login" className="btn btn-info btn-lg">
 						Login
