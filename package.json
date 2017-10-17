@@ -2,27 +2,6 @@
 	"name": "notes-app-client",
 	"version": "0.1.0",
 	"private": true,
-	"description": "React Serverless Demo Notes App",	
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/cbroberg/notes-app-client.git"
-	},
-	"keywords": [
-		"serverless",
-		"react",
-		"notes",
-		"app",
-		"fullstack",
-		"microservices",
-		"aws",
-		"lambda"
-	],
-	"author": "Christian Broberg",
-	"license": "MIT",
-	"bugs": {
-		"url": "https://github.com/cbroberg/notes-app-client/issues"
-	},
-	"homepage": "https://github.com/cbroberg/notes-app-client#readme",
 	"dependencies": {
 		"amazon-cognito-identity-js": "^1.19.0",
 		"aws-sdk": "^2.100.0",
