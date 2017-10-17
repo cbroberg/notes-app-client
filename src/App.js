@@ -53,7 +53,7 @@ class App extends Component {
 				<Navbar fluid collapseOnSelect>
 					<Navbar.Header>
 						<Navbar.Brand>
-							<Link to="/">ODEUM Notes</Link>
+							<Link to="/">ODEUM Notes (v. 0.1.0.)</Link>
 						</Navbar.Brand>
 						<Navbar.Toggle />
 					</Navbar.Header>

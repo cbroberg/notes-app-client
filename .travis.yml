@@ -1,21 +1,16 @@
 language: node_js
+
 node_js:
-    - stable
+- node
 
 notifications:
     email: true
     slack: webhouseteam:82qu1PX5R5wkYNCW5x6fVlhu
 
-script:
-  - yarn
-  - yarn build
-  - cp ./build/index.html ./build/200.html
-#  - cp -r /home/travis/build/odeum/odeum-codejs/experiments/3/build ../../
+cache:
+  directories:
+    - node_modules
 
-deploy:
-  provider: surge
-  project: ./build/
-  domain: yournewapp.surge.sh
-  skip_cleanup: true
-  on:
-    all_branches: true
+script: 
+    - brew install awscli
+    - yarn deploy
